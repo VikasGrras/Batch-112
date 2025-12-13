@@ -2,15 +2,18 @@ package org.example.Methods;
 
 public class Example1 {
     public static void main(String[] args) {
-        int num=12321;
-        int result=reverse(num,0);
-        System.out.println(result==num);
+        int num=5;
+        int result=reverse(num);//0
+        System.out.println(result);
     }
+    //top method will execute
+    //value will be returned to stack method call
+    //main //5//4/3/2/1/0
 
-    public static int reverse(int num,int rev){
-        if(num==0) return rev;
-        return reverse(num/10,rev*10+num%10);
 
+    public static int reverse(int num){
+        if(num==0) return num;
+      return reverse(num-1);
     }
 
 }
